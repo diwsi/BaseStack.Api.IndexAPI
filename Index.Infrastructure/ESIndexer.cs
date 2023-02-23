@@ -29,10 +29,7 @@ namespace Index.Infrastructure
             if (!resp.Exists)
             {
                 var indexResp = await client.Indices.CreateAsync(indexName);
-                if (indexResp != null && !indexResp.IsValid)
-                {
-                    throw new IndexException($"Unable to create index '${indexName}'  EXP: {indexResp?.ServerError?.Error?.Reason}");
-                }
+                IndexException.ThrowIf(indexResp != null && !indexResp.IsValid, $"Unable to create index '${indexName}'  EXP: {indexResp?.ServerError?.Error?.Reason}");
             }
         }
 

@@ -24,6 +24,7 @@ namespace Index.Domain.Consumers
                 var resp = await indexer.Index(data.Name, data.ID.ToString(), data.Value);
                 if (!resp)
                 {
+                    
                     throw new IndexException($"Unable to create Index {data.ID}");
                 }
             }

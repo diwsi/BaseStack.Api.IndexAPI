@@ -1,6 +1,8 @@
-﻿namespace Index.Infrastructure
+﻿using Exceptions;
+
+namespace Index.Infrastructure
 {
-    public class IndexException:Exception
+    public class IndexException:BaseException
     {
         public IndexException(string message):base(message)
         {
