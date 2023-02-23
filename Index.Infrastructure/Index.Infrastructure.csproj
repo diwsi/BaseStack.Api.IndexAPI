@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\BaseStack.Exceptions\Exceptions\Exceptions.csproj" />
     <ProjectReference Include="E:\Funland\BaseStackPackages\BaseStack.MessageBusManager\MessageBusManager.csproj" />
   </ItemGroup>
 
